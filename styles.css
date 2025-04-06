@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #2e86de;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .laptop-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  
+  .laptop-card {
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .laptop-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .price {
+    font-size: 1.2rem;
+    color: #2e86de;
+    margin: 0.5rem 0;
+  }
+  
+  .specs {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    text-align: left;
+  }
+  
+  .specs li {
+    margin: 0.3rem 0;
+  }
+  
+  .btn {
+    background-color: #2e86de;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+  }
+  
+  .details {
+    display: none;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.4;
+  }
+  
+  .details.show {
+    display: block;
+  }
+  
+  footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .contact-links {
+    margin-top: 1rem;
+  }
+  
+  .contact-btn {
+    display: inline-block;
+    background-color: #2e86de;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  

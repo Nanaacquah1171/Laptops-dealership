@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TechZone Laptops</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🌟 TechZone Laptops 🌟</h1>
+    <p>Your trusted laptop dealership</p>
+  </header>
+
+  <main class="laptop-list">
+    <div class="laptop-card" style="background-color: #e0f7fa;">
+      <img src="hpspectre360.jpg" alt="HP Spectre x360" />
+      <h3>HP Spectre x360</h3>
+      <p class="price">$1,299</p>
+      <ul class="specs">
+        <li>Intel Core i7 (13th Gen)</li>
+        <li>16GB RAM, 512GB SSD</li>
+        <li>13.5" OLED Touch Display</li>
+        <li>Windows 11</li>
+      </ul>
+      <a href="#" class="btn">🔍 View Details</a>
+    </div>
+
+    <div class="laptop-card" style="background-color: #fce4ec;">
+      <img src="Dell XPS 13.webp" alt="Dell XPS 13" />
+      <h3>Dell XPS 13</h3>
+      <p class="price">$1,199</p>
+      <ul class="specs">
+        <li>Intel Core i7 (12th Gen)</li>
+        <li>16GB RAM, 1TB SSD</li>
+        <li>13.4" FHD+ Display</li>
+        <li>Windows 11 Pro</li>
+      </ul>
+      <a href="#" class="btn">🔍 View Details</a>
+    </div>
+
+    <div class="laptop-card" style="background-color: #e8f5e9;">
+      <img src="MacBook Air.jpg" alt="MacBook Air" />
+      <h3>MacBook Air M2</h3>
+      <p class="price">$1,099</p>
+      <ul class="specs">
+        <li>Apple M2 Chip</li>
+        <li>8GB RAM, 256GB SSD</li>
+        <li>13.6" Retina Display</li>
+        <li>macOS Sonoma</li>
+      </ul>
+      <a href="#" class="btn">🔍 View Details</a>
+    </div>
+
+    <div class="laptop-card" style="background-color: #fff3e0;">
+      <img src="Lenovo ThinkPad X1.jpg" alt="ThinkPad X1" />
+      <h3>Lenovo ThinkPad X1</h3>
+      <p class="price">$1,249</p>
+      <ul class="specs">
+        <li>Intel Core i7 vPro</li>
+        <li>16GB RAM, 1TB SSD</li>
+        <li>14" UHD Display</li>
+        <li>Windows 11 Pro</li>
+      </ul>
+      <a href="#" class="btn">🔍 View Details</a>
+    </div>
+
+    <div class="laptop-card" style="background-color: #ede7f6;">
+      <img src="Asus ROG Zephyrus.jpg" alt="Asus ROG Zephyrus" />
+      <h3>Asus ROG Zephyrus</h3>
+      <p class="price">$1,599</p>
+      <ul class="specs">
+        <li>AMD Ryzen 9</li>
+        <li>32GB RAM, 1TB SSD</li>
+        <li>15.6" QHD 165Hz</li>
+        <li>NVIDIA RTX 4070</li>
+      </ul>
+      <a href="#" class="btn">🔍 View Details</a>
+    </div>
+
+    <div class="laptop-card" style="background-color: #f3e5f5;">
+      <img src="Acer Swift 5.jpg" alt="Acer Swift 5" />
+      <h3>Acer Swift 5</h3>
+      <p class="price">$899</p>
+      <ul class="specs">
+        <li>Intel Core i5 (13th Gen)</li>
+        <li>16GB RAM, 512GB SSD</li>
+        <li>14" FHD Touchscreen</li>
+        <li>Windows 11</li>
+      </ul>
+      <a href="#" class="btn">🔍 View Details</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TechZone. All rights reserved.</p>
+    <div class="contact-links">
+      <a href="mailto:nanaacquah610@gmail.com" class="contact-btn">📧 Email Us</a>
+      <a href="tel:0597174400" class="contact-btn">📞 Call Us</a>
+    </div>
+  </footer>
+  <script>
+    // 1. Search Filter
+    const searchBox = document.createElement("input");
+    searchBox.type = "text";
+    searchBox.placeholder = "🔎 Search laptops...";
+    searchBox.style.margin = "20px auto";
+    searchBox.style.display = "block";
+    searchBox.style.padding = "10px";
+    searchBox.style.width = "80%";
+    document.body.insertBefore(searchBox, document.querySelector("main"));
+  
+    searchBox.addEventListener("input", () => {
+      const query = searchBox.value.toLowerCase();
+      const cards = document.querySelectorAll(".laptop-card");
+  
+      cards.forEach(card => {
+        const title = card.querySelector("h3").textContent.toLowerCase();
+        card.style.display = title.includes(query) ? "block" : "none";
+      });
+    });
+  
+    // 2. Toggle View Details
+    const buttons = document.querySelectorAll(".btn");
+  
+    buttons.forEach(button => {
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+        const specs = button.previousElementSibling; // ul.specs
+        specs.style.display = specs.style.display === "none" ? "block" : "none";
+      });
+    });
+  
+    // Hide all specs initially (optional)
+    document.querySelectorAll(".specs").forEach(specList => {
+      specList.style.display = "none";
+    });
+  </script>
+  
+
+</body>
+</html>
